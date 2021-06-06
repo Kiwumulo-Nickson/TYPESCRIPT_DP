@@ -6,7 +6,17 @@ public class Square implements Shape { @Override public void draw() { System.out
 
 public class Circle implements Shape { @Override public void draw() { System.out.println("Circle::draw()"); } }
 
-public class ShapeMaker { private Shape circle; private Shape rectangle; private Shape square; public ShapeMaker() { circle = new Circle(); rectangle = new Rectangle(); square = new Square()}
+public class ShapeMaker { private Shape circle; private Shape rectangle; private Shape square; public ShapeMaker() { circle = new Circle(); rectangle = new Rectangle(); square = new Square();
+Public void drawCircle(){
+Circle.draw();
+}
+Public void drawRectangle(){
+Rectangle.draw();
+}
+Public void drawSquare(){
+Square.draw();
+}
+}
 
 public class FacadePatternDemo { public static void main(String[] args) { ShapeMaker shapeMaker = new ShapeMaker(); shapeMaker.drawCircle(); shapeMaker.drawRectangle(); shapeMaker.drawSquare(); } }
 
