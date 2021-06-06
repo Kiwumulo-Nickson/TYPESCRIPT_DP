@@ -1,0 +1,32 @@
+//observer
+interface Subscriber
+{
+receiveUpdates()
+}
+class NewsPublisher
+{
+
+
+    private state:object;
+    private subscribers:Array <[]>;
+
+
+subscribe(subscriber: subscriber){
+this.subscribers.push(subscriber);
+}
+unsubscribe(subscriber: subscriber){
+    // this.subscribers.push(subscriber);
+    }
+
+notify() {
+    for (let subscriber of this.subscribers){
+        subscriber.receiveUpdates(this.state){}
+    }
+}  
+
+
+
+
+publish
+
+//observableassq
